@@ -42,6 +42,16 @@ public class ExerciciosStreamApi {
 		
 		// pegando os elementos transformando em inteiros e verificando a media com average imprimindo se tiver true com ifpresent.
 		numerosAleatorios.stream().mapToInt(Integer::parseInt).average().ifPresent(System.out::println);
+		
+		System.out.println("Remova os valores impares:");
+		
+		// cria lista de numeros inteiros pegando com stream map para converter e collect collectors.toList para adicionar na lista.
+		List<Integer> numerosAleatorios2 = numerosAleatorios.stream().map(Integer::parseInt).collect(Collectors.toList());
+		
+		// remove os numeros impares
+		numerosAleatorios2.removeIf(i -> i % 2 != 0);
+		
+		numerosAleatorios2.forEach(System.out::println);
 
 	}
 
