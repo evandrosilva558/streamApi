@@ -34,12 +34,14 @@ public class ExerciciosStreamApi {
 		
 		System.out.println("Pegue os numeros pares e maiores que 2 e coloque em uma lista:");
 		
-		
 		/* pegando os elementos com stream transformando em numeros inteiros com map parseInt, filtrando com condicionais que retorna boleano como if e else
 		 * e colocando em uma nova lista com collect collectors toList e imprimindo a lista com laco forEach percorrendo a List*/
-		
 		numerosAleatorios.stream().map(Integer::parseInt).filter(i -> i % 2 == 0 && i > 2).collect(Collectors.toList()).forEach(System.out::println);
 		
+		System.out.println("Mostre a media dos numeros:");
+		
+		// pegando os elementos transformando em inteiros e verificando a media com average imprimindo se tiver true com ifpresent.
+		numerosAleatorios.stream().mapToInt(Integer::parseInt).average().ifPresent(System.out::println);
 
 	}
 
