@@ -12,7 +12,7 @@ public class ExerciciosStreamApi {
 		
 		System.out.println("Imprima todos od elementos dessa lista de String;");
 		
-		// funcao de impressao utilizando forEach e interface funcional lambida.
+		// funcao de impressao utilizando forEach para percorrer a lista e interface funcional lambida.
 		numerosAleatorios.forEach(s -> System.out.println(s));
 
 	}
